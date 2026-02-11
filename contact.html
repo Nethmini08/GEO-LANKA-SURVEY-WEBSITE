@@ -161,18 +161,24 @@
 
                 <!-- Form -->
                 <div class="bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
-                    <form action="#" method="POST" class="space-y-6">
+                    <div id="result" class="hidden mb-4 p-4 rounded-lg text-center font-medium"></div>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <!-- Replace with your Access Key from https://web3forms.com/ -->
+                        <input type="hidden" name="access_key" value="7da995c1-1a8e-4877-b554-80b24028c28c">
+
+                        <!-- Redirect removed for AJAX handling -->
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-                                <input type="text" id="name"
+                                <input type="text" id="name" name="name" required
                                     class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-200 outline-none transition"
                                     placeholder="John Doe">
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone
                                     Number</label>
-                                <input type="tel" id="phone"
+                                <input type="tel" id="phone" name="phone" required
                                     class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-200 outline-none transition"
                                     placeholder="077 123 4567">
                             </div>
@@ -180,25 +186,25 @@
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
                                 Address</label>
-                            <input type="email" id="email"
+                            <input type="email" id="email" name="email" required
                                 class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-200 outline-none transition"
                                 placeholder="john@example.com">
                         </div>
                         <div>
                             <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service
                                 Required</label>
-                            <select id="service"
+                            <select id="service" name="service"
                                 class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-200 outline-none transition">
-                                <option value="">Select a service...</option>
-                                <option value="land">Land Surveying</option>
-                                <option value="gps">GPS & Mapping</option>
-                                <option value="drone">Drone Survey</option>
-                                <option value="other">Other</option>
+                                <option value="Unspecified">Select a service...</option>
+                                <option value="Land Surveying">Land Surveying</option>
+                                <option value="GPS & Mapping">GPS & Mapping</option>
+                                <option value="Drone Survey">Drone Survey</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea id="message" rows="4"
+                            <textarea id="message" name="message" rows="4" required
                                 class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-500 focus:bg-white focus:ring-2 focus:ring-brand-200 outline-none transition"
                                 placeholder="Tell us about your project..."></textarea>
                         </div>
@@ -231,9 +237,60 @@
     <!-- Footer -->
     <footer class="bg-gray-900 text-white border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-            <p class="text-gray-500 text-sm">&copy; 2024 Geo Lanka Survey Solution.</p>
+            <p class="text-gray-500 text-sm">&copy; 2024 Geo Lanka Survey Solution. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.innerHTML = "Please wait...";
+            result.classList.remove('hidden', 'bg-green-50', 'text-green-700', 'bg-red-50', 'text-red-700');
+            result.classList.add('bg-gray-50', 'text-gray-500', 'block');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Thank you! Your message has been sent successfully.";
+                        result.classList.remove('bg-gray-50', 'text-gray-500', 'bg-red-50', 'text-red-700');
+                        result.classList.add('bg-green-50', 'text-green-700');
+                        form.reset();
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message || "Something went wrong!";
+                        result.classList.remove('bg-gray-50', 'text-gray-500');
+                        result.classList.add('bg-red-50', 'text-red-700');
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                    result.classList.remove('bg-gray-50', 'text-gray-500');
+                    result.classList.add('bg-red-50', 'text-red-700');
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.classList.add('hidden');
+                    }, 5000);
+                });
+        });
+    </script>
 </body>
 
 </html>
