@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Geo Lanka Survey Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            500: '#764797', // Lighter
+                            600: '#70448f',
+                            700: '#562c71',
+                            800: '#542b6e',
+                            900: '#522a6b', // Darkest
+                        },
+                        tech: {
+                            500: '#0ea5e9',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="assets/images/logo.png" alt="Geo Lanka Survey" class="h-12 w-auto object-contain">
+                    <span class="font-bold text-2xl tracking-tight text-brand-900">Geo Lanka Survey Solution</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-gray-600 hover:text-brand-600 transition font-medium px-1 py-1">Home</a>
+                    <a href="services.html"
+                        class="text-brand-600 font-semibold border-b-2 border-brand-600 px-1 py-1">Services</a>
+                    <a href="gallery.html"
+                        class="text-gray-600 hover:text-brand-600 transition font-medium px-1 py-1">Gallery</a>
+                    <a href="about.html"
+                        class="text-gray-600 hover:text-brand-600 transition font-medium px-1 py-1">About Us</a>
+                    <a href="contact.html"
+                        class="bg-gray-900 hover:bg-brand-600 text-white px-6 py-2.5 rounded-full transition duration-300 font-medium shadow-lg hover:shadow-brand-500/30">Contact
+                        Us</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 focus:outline-none"
+                        onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white border-t" id="mobile-menu">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 font-medium">Home</a>
+                <a href="services.html"
+                    class="block px-3 py-2 text-brand-600 font-bold bg-brand-50 rounded-lg">Services</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 font-medium">About Us</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-600 font-medium">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gray-900 pt-32 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://placehold.co/1920x600/166534/white?text=Services+Page+Banner" alt="Services Banner"
+                class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Professional Services</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Comprehensive surveying and mapping solutions tailored to
+                your project needs.</p>
+        </div>
+    </header>
+
+    <!-- Detailed Services List -->
+    <main class="flex-grow py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Service Block 1 -->
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-20 scroll-mt-24" id="land-survey">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <img src="assets/images/land-surveying.jpg" alt="Land Surveying"
+                            class="w-full transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-3xl font-bold uppercase tracking-wider text-white drop-shadow-md">Land
+                                Surveying</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-brand-600 font-bold uppercase tracking-wider text-sm mb-2 block">Foundational
+                        Services</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Land & Cadastral Surveying</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Accurate boundary definition is crucial for any property transaction or development. We provide
+                        certified survey plans accepted by all government institutions in Sri Lanka.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Boundary Demarcation & Fencing
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Subdivision & Amalgamation Plans
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Contour Survey
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Road & Building Survey
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Crack Survey
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Topographic Surveying
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-brand-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Setting Out Works
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="text-white bg-brand-600 hover:bg-brand-700 px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-brand-500/30">Request
+                        Quotation</a>
+                </div>
+            </div>
+
+            <!-- Service Block 2 -->
+            <div class="flex flex-col md:flex-row-reverse gap-12 items-center mb-20 scroll-mt-24"
+                id="engineering-survey">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <img src="assets/images/engineering-surveying.jpg" alt="Engineering Surveying"
+                            class="w-full transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-3xl font-bold uppercase tracking-wider text-white drop-shadow-md">
+                                Engineering
+                                Survey</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-tech-500 font-bold uppercase tracking-wider text-sm mb-2 block">Construction
+                        Support</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Engineering & Topographic Surveys</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Before design begins, you need to know the land. We provide detailed contour maps and site plans
+                        for architects and engineers.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-tech-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Contour Surveys & DTM Generation
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-tech-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Road & Infrastructure Setting Out
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-tech-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            As-Built Surveys
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="text-white bg-blue-500 hover:bg-blue-400 px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-brand-500/30">Consult
+                        an Expert</a>
+
+                </div>
+            </div>
+
+            <!-- Service Block 3 -->
+            <div class="flex flex-col md:flex-row gap-12 items-center mb-20 scroll-mt-24" id="drone-survey">
+                <div class="md:w-1/2">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+                        <img src="assets/images/drone-survey.png" alt="Drone Surveying"
+                            class="w-full transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <h3 class="text-3xl font-bold uppercase tracking-wider text-white drop-shadow-md">
+                                Drone Survey</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-orange-500 font-bold uppercase tracking-wider text-sm mb-2 block">Advanced
+                        Technology</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">UAV / Drone Mapping</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        For large areas, our drone mapping solutions offer rapid data collection with high-resolution
+                        orthomosaics and 3D models.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-orange-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            High-Resolution Orthophotos
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-orange-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            3D Point Clouds & Modeling
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <svg class="w-5 h-5 text-orange-500 mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Volume Calculations
+                        </li>
+                    </ul>
+                    <a href="contact.html"
+                        class="text-white bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-medium transition shadow-lg shadow-orange-500/30">Get
+                        Aerial Insights</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center md:text-left">
+                <p class="text-gray-500 text-sm">&copy; 2024 Geo Lanka Survey Solution.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
