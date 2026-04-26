@@ -14,13 +14,21 @@ The website serves as a digital portfolio/presence for "Geo Lanka Survey," focus
 - Deployment: GitHub Pages
 
 ## Key Features
-- Professional Landing Page: Designed with a focus on business-oriented aesthetics.
+- Professional Landing Page: Business-focused design for professional branding.
+- Mobile Responsive Design: Fully optimized for desktops, tablets, and smartphones, ensuring a seamless user experience across all devices.
 - Service Highlights: Clearly lists the surveying services offered.
-- Mobile Responsive: Works seamlessly on different screen sizes (desktops, tablets, and mobile devices).
+
+## Domain & Deployment
+- Domain: https://geolankasurveysolutions.lk
+- Deployment: Live on GitHub Pages with custom domain configuration.
 
 ## Project Structure
 - `index.html`: The main structure of the website.
 - `styles/`: Contains the CSS files for styling and layout.
 - `assets/`: Contains images and icons used throughout the site.
+
+## How to View
+You can view the live website here: 
+https://nethmini08.github.io/GEO-LANKA-SURVEY-WEBSITE/
 ---
 *Developed by Nethmini Senarathna | QA Engineer & Web Enthusiast*
