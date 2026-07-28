@@ -152,8 +152,13 @@
                             </div>
                             <div>
                                 <p class="text-xs text-brand-200 uppercase font-bold tracking-wider mb-1">Office</p>
-                                <p class="text-lg font-medium">No 42/A, Central Road</p>
-                                <p class="text-lg font-medium">Matugama, Sri Lanka</p>
+                                <a href="https://www.google.com/maps/search/?api=1&query=No%2042/A,%20Central%20Road,%20Matugama,%20Sri%20Lanka"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="text-lg font-medium hover:text-brand-300 transition inline-block">
+                                    No 42/A, Central Road<br>
+                                    Matugama, Sri Lanka
+                                </a>
                             </div>
                         </div>
 
@@ -218,12 +223,21 @@
         </div>
     </main>
 
-    <!-- Map Placeholder -->
-    <div class="w-full h-96 bg-gray-200 relative grayscale hover:grayscale-0 transition duration-700">
-        <img src="https://placehold.co/1920x400/e2e8f0/64748b?text=Map+Location" class="w-full h-full object-cover">
-        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div
-                class="bg-white px-6 py-3 rounded-lg shadow-xl font-bold text-gray-900 border border-gray-100 flex items-center gap-2">
+    <!-- Map Location -->
+    <div class="w-full h-[30rem] bg-gray-200 relative overflow-hidden">
+        <iframe
+            src="https://www.google.com/maps?q=No%2042/A,%20Central%20Road,%20Matugama,%20Sri%20Lanka&z=14&output=embed"
+            class="w-full h-full border-0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Geo Lanka Survey Solutions Location">
+        </iframe>
+        <div class="absolute inset-0 flex items-start justify-center pt-6 pointer-events-none">
+            <a href="https://www.google.com/maps/search/?api=1&query=No%2042/A,%20Central%20Road,%20Matugama,%20Sri%20Lanka"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="pointer-events-auto bg-white px-6 py-3 rounded-lg shadow-xl font-bold text-gray-900 border border-gray-100 flex items-center gap-2 hover:bg-brand-50 transition">
                 <svg class="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -231,7 +245,7 @@
                         d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
                 Find Us Here
-            </div>
+            </a>
         </div>
     </div>
 
